@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface CountdownProps {
@@ -40,7 +42,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, onComplete }) => {
       const formatTime = (time: number) => time.toString().padStart(2, '0');
 
       if (timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0) {
-            return <span className="text-white dark:text-slate-700">Time's up!</span>;
+            return <span className="text-neutral-900 dark:text-slate-100">Time&apos;s up!</span>;
       }
 
       return (
